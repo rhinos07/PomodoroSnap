@@ -1,0 +1,26 @@
+﻿<Window x:Class="PomodoSnap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PomodoSnap"
+                  xmlns:p="clr-namespace:PomodoSnap.Properties"
+        mc:Ignorable="d"  Height="150" Width="170" ResizeMode="NoResize" Topmost="True" Icon="glyphicons-54-alarm.png" 
+        Left="{Binding Source={x:Static p:Settings.Default}, Path=Left, Mode=TwoWay}"
+        Top="{Binding Source={x:Static p:Settings.Default}, Path=Top, Mode=TwoWay}"
+        Closed="Window_Closed">
+    <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <TextBlock  HorizontalAlignment="Center" x:Name="tbTime" Height="60" Text="20:25" FontSize="48" MouseDown="tbTime_MouseDown"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                <Button x:Name="Start" Click="Start_Click" Margin="1" Background="{x:Null}" BorderBrush="{x:Null}"  Focusable="True" TabIndex="1" >
+                    <Image x:Name="glyphicons_174_play_png" Height="18" Source="glyphicons-174-play.png" Stretch="Fill" Width="16"/>
+                </Button>
+                <Button x:Name="Stop" Click="Stop_Click" Margin="1" BorderBrush="{x:Null}" Background="{x:Null}"  Focusable="True" TabIndex="2" >
+                    <Image x:Name="glyphicons_176_stop_png" Height="14" Source="glyphicons-176-stop.png" Stretch="Fill" Width="14"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
